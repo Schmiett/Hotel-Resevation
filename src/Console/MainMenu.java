@@ -18,7 +18,7 @@ public class MainMenu {
     public static Scanner input;
 
 
-    public  void display_Menu() {
+    public static void display_Menu() {
         System.out.println("Welcome to CRS Hotels Reservation System");
         System.out.println("1 - Find and reserve a room");
         System.out.println("2 - See my reservations");
@@ -27,13 +27,13 @@ public class MainMenu {
         System.out.println("5 - Exit");
 
     }
-    private  void  viewMyReservation() {
+    private static void  viewMyReservation() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Customer Email:");
         String email = scanner.next();
         System.out.println(HotelResource.getCustomersReservation(email));
     }
-    private  Customer createAccount() {
+    private static Customer createAccount() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Customer First Name:");
         String firstName = scanner.next();
@@ -46,7 +46,7 @@ public class MainMenu {
         return new Customer(firstName, lastName, email);
 
     }
-    private  void findAndReserveARoom() {
+    private static void findAndReserveARoom() {
         //Variables for Room Search
         Date checkOutDate = new Date();
         Date checkInDate = new Date();
@@ -92,7 +92,7 @@ public class MainMenu {
 
 
 
-    public  void mainMenu() {
+    public static void mainMenu() {
         display_Menu();
         input = new Scanner(System.in);
         int selection = input.nextInt();
@@ -143,7 +143,7 @@ public class MainMenu {
 
     }
 
-    public  void main(String[] args) {
+    public static void main(String[] args) {
        mainMenu();
     }
 }

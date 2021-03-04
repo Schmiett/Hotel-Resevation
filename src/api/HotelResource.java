@@ -21,7 +21,7 @@ public class HotelResource {
         customerService.addCustomer(email, firstName, lastName);
         System.out.println("Your account has been Created!");
     }
-    public IRoom getRoom(String roomNumber){
+    public static IRoom getRoom(String roomNumber){
         return reservationService.getARoom(roomNumber);
     }
 
